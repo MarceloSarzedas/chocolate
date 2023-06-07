@@ -1,0 +1,25 @@
+body {
+    background-color: #795548e0;
+}
+
+div {
+    display: flex;
+    background-color: brown;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.card-produto {
+    flex: 1 1 300px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px 1px gray;
+  }
+
+p {
+    font-size: 18px;
+    color: blue;
+    background-color: aqua;
+    text-align: start;
+}
