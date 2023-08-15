@@ -1,3 +1,4 @@
+
 const produtosContainer = document.querySelector('.produtos-container');
 const cart = document.getElementById('cart');
 const totalElement = document.getElementById('total');
@@ -82,3 +83,11 @@ modal.addEventListener("click", function(event) {
         carinhoIcon.style.opacity = 1;
     }
 });
+const fecha = document.getElementsByClassName('fecha')
+
+for (let i = 0; i < fecha.length; i++) {
+    fecha[i].addEventListener('click', function() {
+        modal.style.display = "none";
+        carinhoIcon.style.opacity = 1; // Restaure a opacidade quando a modal for fechada
+    })
+}
