@@ -1,164 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chocktrufas</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chocktrufas</title>
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-   <link rel="stylesheet" href="estilo.css">
- 
-</head>
-<body>
-    <div class="topo">
-        <h1>chock<span class="span">Trufas</span></h1>
-        <span class="material-symbols-outlined">shopping_cart</span>
-        </div>
-      </div>
-     
-      <div class="main">
-        <div class="container">
-            <div class="card-produto">
-                <div class="container-imagem gallery-wrapper">
-                  <div class="carousel">
-                    <div class="your-class">
-                      <div><img src="verdadeiro/img.jpg" alt="" class="item current-item"> </div>
-                      
-                    </div>
-                    
-                  </div>
-                </div>
-                <div class="container-info">
-                  <h3>caixa da promoção</h3>
-                  <p>Na escolha de dois sai por 10,00</p>
-                  <small>promoçao</small>
-                </div>
-                <div class="container-preco">
-                  <span>R$10,00</span>
-                  <div class="container-icone">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                    <span class="material-symbols-outlined">info</span>
-                  </div>
-                </div>
-              </div>
-              
-          <div class="card-produto">
-            <div class="container-imagem">
-              <img src="verdadeiro/img2.jpeg" />
-            </div>
-            <div class="container-info">
-              <h3>conetufado de bejeinho</h3>
-              <p>
-                Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de chocolate, 
-              </p>
-              <small>Sobremesa</small>
-            </div>
-            <div class="container-preco">
-              <span>R$5,00</span>
-              <div class="container-icone">
-                <span class="material-symbols-outlined">
-                  shopping_cart
-                  </span>
-                <span class="material-symbols-outlined">info</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-produto">
-            <div class="container-imagem">
-              <img src="verdadeiro/img3.jpeg" />
-            </div>
-            <div class="container-info">
-              <h3>conetufado chokito</h3>
-              <p>
-                Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de chocolate, 
-              </p>
-              <small>Sobremesa</small>
-            </div>
-            <div class="container-preco">
-              <span>R$5,00</span>
-              <div class="container-icone">
-                <span class="material-symbols-outlined">
-                  shopping_cart
-                  </span>
-                <span class="material-symbols-outlined">info</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-produto">
-            <div class="container-imagem">
-              <img src="verdadeiro/img4.jpeg" />
-            </div>
-            <div class="container-info">
-              <h3>conetufado palha italiana</h3>
-              <p>
-                Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de chocolate, 
-              </p>
-              <small>Sobremesa</small>
-            </div>
-            <div class="container-preco">
-              <span>R$5,00</span>
-              <div class="container-icone">
-                <span class="material-symbols-outlined">
-                  shopping_cart
-                  </span>
-                <span class="material-symbols-outlined">info</span>
-                
-              </div>
-            </div>
-          </div>
-          <div class="card-produto">
-            <div class="container-imagem">
-              <img src="verdadeiro/img5.jpeg" />
-            </div>
-            <div class="container-info">
-              <h3>trufado Limonada</h3>
-              <p>
-                Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de chocolate, 
-              </p>
-              <small>Sobremesa</small>
-            </div>
-            <div class="container-preco">
-              <span>R$5,00</span>
-              <div class="container-icone">
-                <span class="material-symbols-outlined">
-                  shopping_cart
-                  </span>
-                <span class="material-symbols-outlined">info</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-produto">
-            <div class="container-imagem">
-              <img src="verdadeiro/img6.jpeg" />
-            </div>
-            <div class="container-info">
-              <h3>conetufado paçoca</h3>
-              <p>
-                Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de chocolate,
-              </p>
-              <small>Sobremesa</small>
-            </div>
-            <div class="container-preco">
-              <span>R$5,00</span>
-              <div class="container-icone">
-                <span class="material-symbols-outlined">
-                  shopping_cart
-                  </span>
-               <span class="material-symbols-outlined">info</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
   
-   
-   
-   <footer></footer> 
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+  <div class="topo">
+    <h1>chock<span class="span">Trufas</span></h1>
+    <span id="carinho" class="material-symbols-outlined">shopping_cart</span>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <!-- Conteúdo do carrinho de compras aqui -->
+          <div class="cart">
+            <h1>Carrinho de Compras</h1>
+            <ul type="none" id="cart">
+              
+            </ul>
+            <p id="total">Total: R$0.00</p>
+            <button id="finalizar" class="finalizar">finalizar</button>
+            <button class="fecha" id="fecha">fechar</button>
+            
+          </div>
+          <p>Seu carrinho de compras</p>
+      </div>
+  </div>
+    <nav class="nav-top">
+      <ul type="none">
+        <p>contado</p>
+      
+        <li>telefone: <a href="tel:+21986756989 ">(21)986756989</a> <a href="tel:+21984840478">(21)984840478</a></li>
+        <li>email: <a href="mailto:chocktrufas@gmail.com">chocktrufas@gmail.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+  <div class="main">
+    <div class="produtos-container">
+      <div class="card-produto">
+        <div class="container-imagem gallery-wrapper">
+          <div class="carousel">
+            <div class="your-class">
+              <div><img src="verdadeiro/img.jpg" alt="" class="item current-item"> </div>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="container-info">
+          <h3>caixa da promoção</h3>
+          <p>Na escolha de dois sai por 10,00</p>
+          <small>promoçao</small>
+        </div>
+        <div class="container-preco">
+          <span>R$10,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">shopping_cart</span>
+            <span class="material-symbols-outlined">info</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-produto">
+        <div class="container-imagem">
+          <img src="verdadeiro/img2.jpeg" />
+        </div>
+        <div class="container-info">
+          <h3>conetufado de bejeinho</h3>
+          <p>
+            Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de
+            chocolate,
+          </p>
+          <small>Sobremesa</small>
+        </div>
+        <div class="container-preco">
+          <span>R$5,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">
+              shopping_cart
+            </span>
+            <span class="material-symbols-outlined">info</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-produto">
+        <div class="container-imagem">
+          <img src="verdadeiro/img3.jpeg" />
+        </div>
+        <div class="container-info">
+          <h3>conetufado chokito</h3>
+          <p>
+            Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de
+            chocolate,
+          </p>
+          <small>Sobremesa</small>
+        </div>
+        <div class="container-preco">
+          <span>R$5,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">
+              shopping_cart
+            </span>
+            <span class="material-symbols-outlined">info</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-produto">
+        <div class="container-imagem">
+          <img src="verdadeiro/img4.jpeg" />
+        </div>
+        <div class="container-info">
+          <h3>conetufado palha italiana</h3>
+          <p>
+            Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de
+            chocolate,
+          </p>
+          <small>Sobremesa</small>
+        </div>
+        <div class="container-preco">
+          <span>R$5,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">
+              shopping_cart
+            </span>
+            <span class="material-symbols-outlined">info</span>
+
+          </div>
+        </div>
+      </div>
+      <div class="card-produto">
+        <div class="container-imagem">
+          <img src="verdadeiro/img5.jpeg" />
+        </div>
+        <div class="container-info">
+          <h3>trufado Limonada</h3>
+          <p>
+            Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de
+            chocolate,
+          </p>
+          <small>Sobremesa</small>
+        </div>
+        <div class="container-preco">
+          <span>R$5,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">
+              shopping_cart
+            </span>
+            <span class="material-symbols-outlined">info</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-produto">
+        <div class="container-imagem">
+          <img src="verdadeiro/img6.jpeg" />
+        </div>
+        <div class="container-info">
+          <h3>conetufado paçoca</h3>
+          <p>
+            Um cone trufado é uma sobremesa deliciosa que combina um cone crocante com um recheio cremoso de trufa de
+            chocolate,
+          </p>
+
+          <small>Sobremesa</small>
+        </div>
+        <div class="container-preco">
+          <span>R$5,00</span>
+          <div class="container-icone">
+            <span class="material-symbols-outlined carinho">
+              shopping_cart
+            </span>
+            <span class="material-symbols-outlined">info</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <footer></footer>
 </body>
 
 
-
+<script src="carinho.js"></script>
 
 </html>
