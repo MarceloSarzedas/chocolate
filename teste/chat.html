@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPG Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .personagem-card {
+            border: 2px solid #333;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            float: left;
+            background-color: #f9f9f9;
+        }
+
+        .personagem-card h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="personagem-card" id="mago-card">
+        <h2>Mago</h2>
+        <p><strong>Nome:</strong> Merlin</p>
+        <p><strong>Classe:</strong> Mago</p>
+        <p><strong>Nível:</strong> 1</p>
+        <p><strong>Força:</strong> 5</p>
+        <p><strong>Magia:</strong> 10</p>
+        <p><strong>Agilidade:</strong> 3</p>
+        <p><strong>Defesa:</strong> 2</p>
+        <p><strong>Vida:</strong> <span id="mago-vida">100</span></p>
+        <p><strong>Magia:</strong> <span id="mago-magia">10</span></p>
+        <p><strong>Ações:</strong></p>
+    </div>
+
+    <div class="personagem-card" id="guerreiro-card">
+        <h2>Guerreiro</h2>
+        <p><strong>Nome:</strong> Aragorn</p>
+        <p><strong>Classe:</strong> Guerreiro</p>
+        <p><strong>Nível:</strong> 1</p>
+        <p><strong>Força:</strong> 10</p>
+        <p><strong>Magia:</strong> 1</p>
+        <p><strong>Agilidade:</strong> 6</p>
+        <p><strong>Defesa:</strong> 8</p>
+        <p><strong>Vida:</strong> <span id="guerreiro-vida">150</span></p>
+        <p><strong>Magia:</strong> <span id="guerreiro-magia">1</span></p>
+        <p><strong>Ações:</strong></p>
+    </div>
+
+    <script>
+        // Definindo os objetos dos personagens
+        const mago = {
+            nome: "Merlin",
+            classe: "Mago",
+            nivel: 1,
+            forca: 5,
+            magia: 10,
+            agilidade: 3,
+            defesa: 2,
+            vida: 100
+        };
+
+        const guerreiro = {
+            nome: "Aragorn",
+            classe: "Guerreiro",
+            nivel: 1,
+            forca: 10,
+            magia: 1,
+            agilidade: 6,
+            defesa: 8,
+            vida: 150
+        };
+
+        // Funções de ação
+        function atacar(personagemAtacante, personagemAlvo) {
+            const dano = personagemAtacante.forca - personagemAlvo.defesa;
+            if (dano > 0) {
+                personagemAlvo.vida -= dano;
+                document.getElementById(`${personagemAlvo.nome}-acoes`).innerHTML += `<p>${personagemAtacante.nome} atacou ${personagemAlvo.nome} causando ${dano} de dano!</p>`;
+                document.getElementById(`${personagemAlvo.nome}-vida`).textContent = personagemAlvo.vida;
+            } else {
+                document.getElementById(`${personagemAlvo.nome}-acoes`).innerHTML += `<p>${personagemAtacante.nome} atacou ${personagemAlvo.nome}, mas a defesa foi muito forte e causou nenhum dano.</p>`;
+            }
+        }
+
+        function usarMagia(personagemLancador, personagemAlvo) {
+            const dano = personagemLancador.magia - personagemAlvo.defesa;
+            if (dano > 0) {
+                personagemAlvo.vida -= dano;
+                personagemLancador.magia -= 5;
+                document.getElementById(`${personagemLancador.nome}-acoes`).innerHTML += `<p>${personagemLancador.nome} lançou uma magia em ${personagemAlvo.nome} causando ${dano} de dano!</p>`;
+                document.getElementById(`${personagemAlvo.nome}-vida`).textContent = personagemAlvo.vida;
+                document.getElementById(`${personagemLancador.nome}-magia`).textContent = personagemLancador.magia;
+            } else {
+                document.getElementById(`${personagemLancador.nome}-acoes`).innerHTML += `<p>${personagemLancador.nome} lançou uma magia em ${personagemAlvo.nome}, mas a defesa foi muito forte e causou nenhum dano.</p>`;
+            }
+        }
+
+        function defender(personagem) {
+            personagem.defesa += 2;
+            document.getElementById(`${personagem.nome}-acoes`).innerHTML += `<p>${personagem.nome} entrou em posição defensiva! Sua defesa aumentou.</p>`;
+        }
+
+        // Atualizando as informações nas cartas
+        const magoCard = document.getElementById("mago-card");
+        magoCard.innerHTML += '<div id="Merlin-acoes"></div>';
+        magoCard.innerHTML += '<button onclick="atacar(mago, guerreiro)">Atacar</button>';
+        magoCard.innerHTML += '<button onclick="usarMagia(mago, guerreiro)">Usar Magia</button>';
+        magoCard.innerHTML += '<button onclick="defender(mago)">Defender</button>';
+
+        const guerreiroCard = document.getElementById("guerreiro-card");
+        guerreiroCard.innerHTML += '<div id="Aragorn-acoes"></div>';
+        guerreiroCard.innerHTML += '<button onclick="atacar(guerreiro, mago)">Atacar</button>';
+        guerreiroCard.innerHTML += '<button onclick="usarMagia(guerreiro, mago)">Usar Magia</button>';
+        guerreiroCard.innerHTML += '<button onclick="defender(guerreiro)">Defender</button>';
+    </script>
+</body>
+</html>

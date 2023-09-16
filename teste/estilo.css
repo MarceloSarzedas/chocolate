@@ -1,60 +1,115 @@
+/* Importa duas fontes do Google Fonts. */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/* Define estilos globais para todos os elementos. */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: italic "Poppins", sans-serif;
+  /* Define a fonte padrão para o documento. */
 }
 
-body{
-  background-image:url(/logo.png);
-  background-size:contain;
+/* Define estilos para o corpo do documento. */
+body {
+  background-image: url(/logo.png);
+  
+  /* Define a imagem de fundo. */
+  background-size:cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  /* Define a altura do corpo para ocupar toda a viewport. */
 }
+
+/* Define estilos para parágrafos. */
 p {
   color: #ca735b;
+  /* Define a cor do texto. */
 }
+
+/* Define estilos para a parte superior da página (cabeçalho). */
 .topo {
+  /* Estilos de layout e aparência. */
   width: 100%;
-    padding: 15px 0px;
-    text-align: center;
-    box-shadow: #643e32;
-    background-color: #ca735b;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  padding: 15px 0px;
+  text-align: center;
+  box-shadow: #643e32;
+  background-color: rgba(200, 117, 88, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.carinho {
-  left: 50%;
-  
-}
-.topo .material-symbols-outlined{
+
+/* Estilos para o ícone usando a fonte Material Symbols Outlined. */
+.topo .material-symbols-outlined {
+  /* Estilos de aparência e interação. */
   cursor: pointer;
   color: black;
   text-decoration: none;
-  left: 120vh;
-  top: 15px;
-  position: absolute;
-  
+  order: 2;
+  font-size: 30px;
+  font-family: "Material Symbols Outlined", cursive;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  /* Estilos de layout adicionais. */
   margin: 5px;
   padding: 4px;
-  
-  
+  display: flex;
 }
-.topo .span  {
+
+/* Define estilos para o modal. */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+}
+
+/* Define estilos para o conteúdo do modal. */
+.modal-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(95, 23, 23);
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0.8;
+  position: absolute;
+}
+
+/* Estilos para a classe span dentro do elemento com classe topo. */
+.topo .span {
   color: #3cbd87;
   font-size: 18px;
   font-family: "Poppins";
 }
 
+/* Estilos para a seção principal do conteúdo. */
 .main {
-  
   padding: 50px 20px;
   display: flex;
   justify-content: center;
 }
 
-.container {
+/* Define estilos para o container de produtos. */
+.produtos-container {
   max-width: 1024px;
   display: flex;
   flex-wrap: wrap;
@@ -62,27 +117,53 @@ p {
   gap: 40px;
 }
 
+/* Estilos para links na navegação superior. */
+.nav-top a {
+  font-size: 1, 5rem;
+  text-decoration: none;
+  color: #27c0db;
+}
+
+/* Estilos para parágrafos na navegação superior. */
+.nav-top p {
+  color: #0c2d33;
+  font-size: 20px;
+}
+
+/* Estilos para itens de lista na navegação superior. */
+.nav-top li {
+  color: #04191d;
+  font-size: 20px;
+}
+
+/* Estilos para cards de produtos. */
 .card-produto {
+  /* Estilos de layout, aparência e sombreamento. */
   flex: 1 1 300px;
-  border-radius: 4px ;
+  border-radius: 4px;
   border-color: #ca735b;
   box-shadow: inset 1px 1px 10px 1px rgb(14, 3, 3);
-  background-color:#643e32;
-  
+  background: rgba(87, 50, 18, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+/* Define estilos para a altura do container de imagem. */
 .container-img {
   height: 200px;
-  
 }
 
+/* Define estilos para a imagem dentro do container de imagem. */
 .container-imagem img {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  
 }
 
+/* Define estilos para o container de informações do produto. */
 .container-info {
   padding: 0px 10px;
   height: 150px;
@@ -90,16 +171,21 @@ p {
   flex-direction: column;
   justify-content: space-around;
 }
+
+/* Define estilos para o texto pequeno no container de informações. */
 .container-info small {
   font-size: 14px;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+/* Define estilos para os títulos no container de informações. */
 .container-info h3 {
   font-size: 18px;
   color: #ca735b;
 }
 
+/* Define estilos para o container de preço do produto. */
 .container-preco {
   padding: 10px;
   border-top: 1px solid #c9c4c4;
@@ -107,11 +193,15 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-.container-preco > span{
+
+/* Define estilos para o preço do produto. */
+.container-preco>span {
   font-size: 16px;
   font-family: Impact;
-  color:whitesmoke;
+  color: whitesmoke;
 }
+
+/* Define estilos para o container do ícone. */
 .container-icone {
   padding: 5px;
   border: 1px solid #c9c4c4;
@@ -120,7 +210,124 @@ p {
   display: flex;
   justify-content: center;
   gap: 2px;
+  color: #42da68f8;
 }
-.material-symbols-outlined:hover{
+
+/* Define estilos para a lista de itens no carrinho. */
+.cart ul {
+  background-color: #c9c4c4;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  flex: 1 1 300px;
+  border-radius: 4px;
+  border: 5px;
+}
+
+/* Define estilos para botões no carrinho. */
+.cart button {
+  margin-left: 10px;
+  border: 1, 9px solid forestgreen;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 100px;
+  margin: 5px;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* Define estilos para o botão "Finalizar" no carrinho. */
+.cart .finalizar .fecha {
+  /* Estilos de aparência e posicionamento. */
+  margin-left: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 100px;
+  left: 50%;
+  margin: 5px;
+  background-color: forestgreen;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  bottom: 0;
+  left: 0;
+}
+
+/* Estilos de interação para botões no carrinho quando passam o mouse. */
+.cart button:hover {
+  color: #72ba53;
+  background-color: white;
+  border: 1, 9px solid #72ba53;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Estilos para o título do carrinho. */
+.cart h1 {
+  color: whitesmoke;
+}
+
+/* Estilos para parágrafos no carrinho. */
+.cart p {
+  font-size: 35px;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos para itens de lista no carrinho. */
+.cart li {
+  font-size: 16px;
+  font-family: italic "Poppins", sans-serif;
+  border: 4.5px solid #643e32;
+  margin: 1.9px;
+  color: rgb(7, 66, 61);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos para a estrutura dos itens no carrinho. */
+.cart-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+/* Estilos para imagens dentro dos itens no carrinho. */
+.cart-item img {
+  width: 100px;
+}
+
+/* Estilos para o ícone da fonte Material Symbols Outlined quando passa o mouse. */
+.material-symbols-outlined:hover {
+  color: #72ba53;
+}
+
+/* Estilos para links na navegação superior quando passam o mouse. */
+.nav-top a:hover {
   color: #72ba53;
 }
